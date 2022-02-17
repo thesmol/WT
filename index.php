@@ -31,6 +31,7 @@
             $log_in = "INSERT INTO users (login, password) VALUES ('$login','$pass'')";
             
         }
+        okjpopojk
         
         ?>
         <header>
