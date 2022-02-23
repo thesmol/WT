@@ -34,7 +34,7 @@
             $user -> email = $data['email'];
             $user -> password = $data['password'];
             R::store($user);
-            echo '<div class="mb-3" style ="color: green;">'Вы успешно зарегистрированы!'</div><hr>';
+            echo '<div class="mb-3" style ="color: green;">Вы успешно зарегистрированы!</div><hr>';
         }
         else
         {
