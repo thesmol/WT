@@ -41,8 +41,8 @@ require "db.php";
         </header>
         <nav>
             <ol>
-                <li><a href="/login.php">Авторизация</a></li>
-                <li><a href="/signup.php">Регистрация</a></li>
+                <li><a href="login.php">Авторизация</a></li>
+                <li><a href="signup.php">Регистрация</a></li>
                 <li><a href="#">Главная</a></li>
             </ol>
         </nav>
