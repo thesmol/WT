@@ -49,7 +49,7 @@ if( isset($_SESSION['logged_user']) ):
         </div>
     </form>
     
-<div class = table>
+<div class = "table-responsive">
 
     <table class="table table-hover">
         <tr>
