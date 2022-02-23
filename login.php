@@ -18,7 +18,7 @@
             {
                 //все норм пора логинить пользователя
                 $_SESSION['logged_user'] = $user; // или всего пользователя или его айди
-                echo '<div class="mb-3" style ="color: green;">Вы успешно авторизованы!</div><hr>';
+                echo '<div class="mb-3" style ="color: green;">Вы успешно авторизованы! Можете перейти на <a href="index.php">Главную </a>страницу</div><hr>';
             }
             else
             {
