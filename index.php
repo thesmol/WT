@@ -31,15 +31,15 @@
             $log_in = "INSERT INTO users (login, password) VALUES ('$login','$pass'')";
             
         }
-        okjpopojk
+        
         
         ?>
         <header>
         </header>
         <nav>
             <ol>
-                <li><a href="#">Регистрация</a></li>
-                <li><a href="#">Авторизация</a></li>
+                <li><a href="/login.php">Авторизация</a></li>
+                <li><a href="/signup.php">Регистрация</a></li>
                 <li><a href="#">Главная</a></li>
             </ol>
         </nav>
