@@ -8,6 +8,14 @@ require "db.php";
         <link href="style.css" rel="stylesheet">
         <title>Document</title>
 </head>
+<?php
+if( isset($_SESSION['logged_user']) ): 
+?>
+    Вы авторизованы
+    <hr>
+    <a href="logout.php"></a>
+
+<?php else: ?>
 <nav>
             <ol>
                 <li><a href="login.php">Авторизация</a></li>
@@ -15,3 +23,5 @@ require "db.php";
                 <li><a href="index.php">Главная</a></li>
             </ol>
 </nav>
+<?php endif; ?>
+
