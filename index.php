@@ -13,10 +13,12 @@ if( isset($_SESSION['logged_user']) ):
 ?>
     Вы авторизованы
     <hr>
+    
+    Привет, <?php echo $_SESSION['logged_user']->login; ?>!<br>
     <a href="logout.php">Выйти</a><br>
-    Привет, <?php echo $_SESSION['logged_user']->login; ?>!
 
 <?php else: ?>
+    Вы не авторизованы(((
 <nav>
             <ol>
                 <li><a href="login.php">Авторизация</a></li>
