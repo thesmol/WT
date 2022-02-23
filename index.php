@@ -13,7 +13,7 @@ if( isset($_SESSION['logged_user']) ):
 ?>
     Вы авторизованы
     <hr>
-    <a href="logout.php"></a>
+    <a href="logout.php">Выйти</a>
 
 <?php else: ?>
 <nav>
