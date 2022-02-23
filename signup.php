@@ -10,21 +10,21 @@ require "db.php";
     <div class="mb-3">
     <p>
         <p><strong>Введите логин</strong>:</p>
-        <input type="text" name = "login">
+        <input type="text" name = "login" class="form-control">
     </p>
     <p>
         <p><strong>Введите электронную почту</strong>:</p>
-        <input type="email" name = "email">
+        <input type="email" name = "email" class="form-control">
     </p>
 
     <p>
         <p><strong>Создайте пароль</strong>:</p>
-        <input type="password" name = "password">
+        <input type="password" name = "password" class="form-control">
     </p>
 
     <p>
         <p><strong>Подтвердите пароль</strong>:</p>
-        <input type="password" name = "password_2">
+        <input type="password" name = "password_2" class="form-control">
     </p>
 
     <p>
