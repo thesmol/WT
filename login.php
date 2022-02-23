@@ -10,13 +10,15 @@
     if( isset($data['do_login']))
     {
         $errors = array();
-        $user = R::find('users', 'login = ?', array($data['login']));
+        $user = R::findOne('users', 'login = ?', array($data['login']));
         if( $user )
         {
             //логин существует
             if( password_verify($data['password'], $user->password))
             {
-                
+                //все норм пора логинить пользователя
+                $_SESSION['logged_user'] = $user; // или всего пользователя или его айди
+                echo '<div class="mb-3" style ="color: green;">Вы успешно авторизованы!</div><hr>';
             }
             else
             {
@@ -31,6 +33,7 @@
         if( !empty($errors))
         {
             echo '<div class="mb-3" style ="color: red;">'.array_shift($errors).'</div><hr>';
+            
         }
         
 
