@@ -6,6 +6,35 @@
     require "db.php";
 
     $data = $_POST;
+
+    if( isset($data['do_login']))
+    {
+        $errors = array();
+        $user = R::find('users', 'login = ?', array($data['login']));
+        if( $user )
+        {
+            //логин существует
+            if( password_verify($data['password'], $user->password))
+            {
+                
+            }
+            else
+            {
+                $errors[] = 'Неверный пароль';
+            }
+        }
+        else
+        {
+            $errors[] = 'Пользователь с таким логином не найден';
+        }
+
+        if( !empty($errors))
+        {
+            echo '<div class="mb-3" style ="color: red;">'.array_shift($errors).'</div><hr>';
+        }
+        
+
+    }
 ?>
 <form action="login.php" method ="POST">
     <div class="mb-3">
@@ -20,7 +49,7 @@
     </p>
 
     <p>
-        <input type="submit" value="Войти" class="btn btn-primary" name = "do_sighup">
+        <input type="submit" value="Войти" class="btn btn-primary" name = "do_login">
     </p>
     </div>
 </form>
