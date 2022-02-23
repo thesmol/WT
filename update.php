@@ -1,0 +1,1 @@
+<?php require "require_db.php"; ?>
