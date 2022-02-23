@@ -18,7 +18,7 @@ require "db.php";
             $host = "localhost";
             $user = "root";
             $xampp_pass = "";
-            $bd_name = "reg";
+            $bd_name = "registration";
 
             $sql_connect = new mysqli($host, $user, $xampp_pass, $bd_name);
             if($sql_connect->connect_errno){
