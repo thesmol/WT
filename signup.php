@@ -43,7 +43,7 @@
             $user -> email = $data['email'];
             $user -> password = password_hash($data['password'], PASSWORD_DEFAULT);
             R::store($user);
-            echo '<div class="mb-3" style ="color: green;">Вы успешно зарегистрированы!</div><hr>';
+            echo '<div class="mb-3" style ="color: green;">Вы успешно зарегистрированы! Перейдите на <a href="index.php">главную </a>страницу для входа</div><hr>';
         }
         else
         {
