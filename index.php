@@ -32,8 +32,7 @@
             echo '<div class="mb-3" style ="color: red;">'.array_shift($errors).'</div><hr>';
         }        
  }
-?>
-<?php
+
 if( isset($_SESSION['logged_user']) ): 
 ?>
     <form action="index.php" method ="POST">
@@ -49,26 +48,33 @@ if( isset($_SESSION['logged_user']) ):
         </p>
         </div>
     </form>
-    <form action="index.php" method ="POST">
-    <table border=1>
+    
+<div class = table>
+
+    <table class="table table-hover">
         <tr>
             <td> Заметка</td>
             <td> Удалить </td>
             <td> Изменить </td>
         </tr>
-        
-</table> 
-    <?php
+
+
+<?php
     $array = array(
-        $_SESSION['logged_user']->id,   
-    );
+        $_SESSION['logged_user']->id,);
     $notes = R::find('notes', 'id_user = ?', array($_SESSION['logged_user']->id));
+
     foreach($notes as $note)
     {
-        echo 'Note: '.$note->note. '<br>';
+        print ("<tr>");
+        print ("<td>".$note['note']."</td>");
+        print("<td><a href= 'delete.php?id=".$note['id']."'>delete</a></td>");  
+        print("<td><a href= 'update.php?id=".$note['id']."'>update</a></td>");  
+        print ("</tr>");
     }
-    ?>
-</form>
+?>
+    </table> 
+</div>
 
 
 <?php else: ?>
