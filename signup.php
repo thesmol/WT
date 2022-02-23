@@ -29,7 +29,12 @@
         if( empty($errors))
         {
             // все норм можно регистрировать
-
+            $user = R::dispense('users');
+            $user -> login = $data['login'];
+            $user -> email = $data['email'];
+            $user -> password = $data['password'];
+            R::store($user);
+            echo '<div class="mb-3" style ="color: green;">'Вы успешно зарегистрированы!'</div><hr>';
         }
         else
         {
@@ -49,25 +54,26 @@
     <div class="mb-3">
     <p>
         <p><strong>Введите логин</strong>:</p>
-        <input type="text" name = "login" class="form-control" required>
+        <input type="text" name = "login" class="form-control" value="<?php echo @$data['login']; ?>">
     </p>
     <p>
         <p><strong>Введите электронную почту</strong>:</p>
-        <input type="email" name = "email" class="form-control" required>
+        <input type="email" name = "email" class="form-control" value="<?php echo @$data['email']; ?>">
     </p>
 
     <p>
         <p><strong>Создайте пароль</strong>:</p>
-        <input type="password" name = "password" class="form-control" required>
+        <input type="password" name = "password" class="form-control" value="<?php echo @$data['password']; ?>">
     </p>
 
     <p>
         <p><strong>Подтвердите пароль</strong>:</p>
-        <input type="password" name = "password_2" class="form-control" required>
+        <input type="password" name = "password_2" class="form-control" value="<?php echo @$data['password_2']; ?>">
     </p>
 
     <p>
-        <buttom type="submit" class="btn btn-primary" тname = "do_sighup">Зарегистрироваться</buttom>
+        
+        <input type="submit" value="Зарегистрироваться" class="btn btn-primary" name = "do_sighup">
     </p>
     </div>
 </form>
