@@ -83,6 +83,7 @@
     <p>
         
         <input type="submit" value="Зарегистрироваться" class="btn btn-primary" name = "do_sighup">
+        <a href="index.php">Главная</a>
     </p>
     </div>
 </form>
