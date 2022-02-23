@@ -1,5 +1,5 @@
+<?php require "require_db.php"; ?>
 <?php
-    require "db.php";
 
     $data = $_POST;
     if( isset($data['do_sighup']))
