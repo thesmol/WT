@@ -16,13 +16,13 @@ if( isset($_SESSION['logged_user']) ):
     <a href="logout.php">Выйти</a><br>
 
 <?php else: ?>
-    Вы не авторизованы(((
+        <?php require "login.php"; ?>
 <nav>
-            <ol>
-                <li><a href="login.php">Авторизация</a></li>
+            <!-- <ol>
+                <li><a href="login2.php">Авторизация</a></li>
                 <li><a href="signup.php">Регистрация</a></li>
                 <li><a href="index.php">Главная</a></li>
-            </ol>
+            </ol> -->
 </nav>
 <?php endif; ?>
 
