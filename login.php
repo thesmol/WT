@@ -53,6 +53,7 @@
 
     <p>
         <input type="submit" value="Войти" class="btn btn-primary" name = "do_login">
+        <a href="index.php">Главная</a>
     </p>
     </div>
 </form>
