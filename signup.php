@@ -1,8 +1,8 @@
-<?php require "require_db.php"; ?>
 <?php
+require "db.php";
 
     $data = $_POST;
-    if( isset($data['do_sighup']))
+    if( isset($data['do_signup']))
     {
         $errors = array();
         // здесь регистрируем
@@ -82,7 +82,7 @@
 
     <p>
         
-        <input type="submit" value="Зарегистрироваться" class="btn btn-primary" name = "do_sighup">
+        <input type="submit" value="Зарегистрироваться" class="btn btn-primary" name = "do_signup">
         <a href="index.php">Главная</a>
     </p>
     </div>
