@@ -1,3 +1,10 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+        <title>Document</title>
+</head>
 <?php
 // $id = $_REQUEST['id'];
 // //$notee = $_REQUEST['note']
@@ -35,10 +42,13 @@ if (isset($_REQUEST['id']))
     $res = mysqli_query($con, $s);
     $asd = mysqli_fetch_row($res);
 
-    print("<form class='mb-3'>");
+    print('<form>');
+    print('<div class="mb-3">');
     print('<input hidden type="text" name="target_id" value="'.$id.'" required>');
-    print('<input type="text" name="note" value="'.$asd[1].'" required>');
-    print('<input type="submit" value="Отправить запрос" name="send">');
-    print("</form>");
+    print('<input type="text" class="form-control" name="note" value="'.$asd[1].'" required>');
+    print('<input type="submit" class="btn btn-primary" value="Принять изменения" name="send">');
+    print('<br>');
+    print('</div>');
+    print('</form>');
     }
 ?>
